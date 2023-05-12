@@ -25,7 +25,7 @@
   box-shadow: var(--box-shadow);
   overflow: hidden;
 
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 3rem;
 }
 
 .searchTool > * + * {
@@ -33,7 +33,7 @@
 }
 
 .searchBarInput {
-  width: 80%;
+  width: 100%;
   outline: none;
   font-size: 1rem;
   color: #707070;
@@ -43,6 +43,39 @@
   margin-inline: 0rem;
 }
 
+.AnalyzeVideo label {
+  text-align: left;
+  display: block;
+
+  color: #333;
+  font-weight: 500;
+}
+
 .AnalyzeVideo .searchButton {
   padding: 0.5rem 2rem;
+}
+
+.inputField select option {
+  color: #333;
+}
+
+.filterInput :where(input, select, option) {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+.filterInput {
+  margin-top: 1rem;
+}
+
+.AnalyzeVideo a {
+  cursor: pointer;
 }

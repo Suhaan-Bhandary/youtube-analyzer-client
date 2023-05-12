@@ -1,0 +1,8 @@
+.CommentsDisplay {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.CommentsDisplay li {
+  list-style: disc;
+}
