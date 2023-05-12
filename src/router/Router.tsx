@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import DefaultLayout from '../pages/DefaultLayout';
 import Loading from '../pages/Loading/Loading';
+import VideoAnalytics from '../pages/VideoAnalytics/VideoAnalytics';
 
 const Home = lazy(() => import('../pages/Home/Home'));
 const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
@@ -15,6 +16,7 @@ function Router() {
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/analyze" element={<AnalyzeVideo />} />
+          <Route path="/analytics" element={<VideoAnalytics />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
