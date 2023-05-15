@@ -1,4 +1,4 @@
-.AnalyzeVideo {
+.RecommendMovie {
   min-height: 100vh;
   min-height: 100dvh;
 
@@ -11,9 +11,22 @@
   background-color: rgb(var(--bg-light));
 }
 
-.AnalyzeVideo h1 {
+.RecommendMovie h1 {
   text-align: left;
   font-size: 1.6rem;
+}
+
+.movieFavorite {
+  position: relative;
+  min-width: min(600px, 80vw);
+  max-width: min(600px, 80vw);
+
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+
+  padding: 1.5rem 3rem;
 }
 
 .searchTool {
@@ -44,7 +57,7 @@
   margin-inline: 0rem;
 }
 
-.AnalyzeVideo label {
+.RecommendMovie label {
   text-align: left;
   display: block;
 
@@ -52,7 +65,7 @@
   font-weight: 500;
 }
 
-.AnalyzeVideo .searchButton {
+.RecommendMovie .searchButton {
   padding: 0.5rem 2rem;
 }
 
@@ -73,10 +86,15 @@
   padding: 0.5rem 1rem;
 }
 
+.filterInput select {
+  text-transform: capitalize;
+}
+
 .filterInput {
   margin-top: 1rem;
 }
 
-.AnalyzeVideo a {
+.RecommendMovie a {
+  margin-top: 1rem;
   cursor: pointer;
 }

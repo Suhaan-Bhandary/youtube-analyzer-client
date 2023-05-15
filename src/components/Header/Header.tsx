@@ -69,6 +69,14 @@ function Header() {
             >
               Analyze
             </CustomNavLink>
+            <CustomNavLink
+              path="/recommend-video"
+              onClickCallback={handleCloseNavbar}
+              className={styles.navItem}
+              activeClassName={styles.navItemActive}
+            >
+              Movie Recommendation
+            </CustomNavLink>
           </ul>
         </nav>
       </div>

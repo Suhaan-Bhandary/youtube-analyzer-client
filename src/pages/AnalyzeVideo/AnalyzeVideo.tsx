@@ -11,7 +11,7 @@ function AnalyzeVideo() {
     <main className={styles.AnalyzeVideo}>
       <div className="container">
         <div className={styles.searchTool}>
-          <h1>Search Youtube Video</h1>
+          <h1 className="title">Search Youtube Video</h1>
 
           <div className={styles.filterContainer}>
             <div className={styles.searchBar}>

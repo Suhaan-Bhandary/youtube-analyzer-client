@@ -2,6 +2,8 @@ import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import DefaultLayout from '../pages/DefaultLayout';
 import Loading from '../pages/Loading/Loading';
+import RecommendMovie from '../pages/RecommendMovie/RecommendMovie';
+import Recommendation from '../pages/Recommendation/Recommendation';
 import VideoAnalytics from '../pages/VideoAnalytics/VideoAnalytics';
 
 const Home = lazy(() => import('../pages/Home/Home'));
@@ -17,6 +19,8 @@ function Router() {
           <Route path="/" element={<Home />} />
           <Route path="/analyze" element={<AnalyzeVideo />} />
           <Route path="/analytics" element={<VideoAnalytics />} />
+          <Route path="/recommend-video" element={<RecommendMovie />} />
+          <Route path="/recommendation" element={<Recommendation />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
