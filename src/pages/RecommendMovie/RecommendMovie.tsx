@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { genreList } from '../../assets/data/movies.data';
 import styles from './RecommendMovie.module.css';
 
 function RecommendMovie() {
-  const [title, setTitle] = useState('');
-  const [genre, setGenre] = useState('action');
+  const [description, setDescription] = useState('');
 
   return (
     <div className={styles.RecommendMovie}>
@@ -15,35 +13,19 @@ function RecommendMovie() {
 
           <div className={styles.filterContainer}>
             <div className={styles.searchBar}>
-              <label>Title</label>
+              <label>Description</label>
               <input
                 type="text"
-                placeholder="Title of Movie"
-                onChange={(e) => setTitle(e.target.value)}
-                value={title}
+                placeholder="Description"
+                onChange={(e) => setDescription(e.target.value)}
+                value={description}
                 className={styles.searchBarInput}
               />
-            </div>
-
-            <div className={styles.filterInput}>
-              <label htmlFor="genre">Genre</label>
-              <select
-                name="genre"
-                className={styles.inputField}
-                value={genre}
-                onChange={(e) => setGenre(e.target.value)}
-              >
-                <option value="">Genre</option>
-                {genreList.map((topic) => (
-                  <option value={topic}>{topic}</option>
-                ))}
-                <option value="action">action</option>
-              </select>
             </div>
           </div>
 
           <Link
-            to={`/recommendation?title=${title}&genre=${genre}`}
+            to={`/recommendation?description=${description}`}
             className={`default-button ${styles.searchButton}`}
           >
             Search

@@ -11,16 +11,15 @@ function Recommendation() {
   console.log(movieData);
 
   const [searchParams] = useSearchParams();
-  const movieTitle = searchParams.get('title');
-  const movieGenre = searchParams.get('genre');
+  const movieDescription = searchParams.get('description');
 
   // Get the data from the backend api
   useEffect(() => {
     (async () => {
-      if (!movieTitle || !movieGenre) return;
+      if (!movieDescription) return;
 
       try {
-        const data = await getMovieRecommendation(movieTitle, movieGenre);
+        const data = await getMovieRecommendation(movieDescription);
 
         setMovieData(data);
       } catch (error) {
@@ -28,9 +27,9 @@ function Recommendation() {
         toast.error('Error fetching video Data');
       }
     })();
-  }, [movieTitle, movieGenre]);
+  }, [movieDescription]);
 
-  if (!movieTitle || !movieGenre) {
+  if (!movieDescription) {
     return (
       <main className={styles.errorMessage}>
         <div className="container">
